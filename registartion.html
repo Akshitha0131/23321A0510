@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Holi Event Registration</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #fff3e6;
+      padding: 20px;
+    }
+    .form-container {
+      max-width: 550px;
+      margin: auto;
+      background: #ffffff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #e65c00;
+    }
+    label {
+      display: block;
+      margin: 15px 0 5px;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    input[type="radio"], input[type="checkbox"] {
+      width: auto;
+      margin-right: 5px;
+    }
+    .gender-options {
+      display: flex;
+      gap: 15px;
+      margin-top: 5px;
+    }
+    .timeslot-options {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      margin-top: 5px;
+    }
+    button {
+      background-color: #ff6600;
+      color: white;
+      padding: 12px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+    }
+    button:hover {
+      background-color: #e65c00;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="form-container">
+    <h2>Holi Event Registration</h2>
+    <form action="#" method="POST">
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" required>
+
+      <label for="phone">Phone Number:</label>
+      <input type="tel" id="phone" name="phone" pattern="\d{10}" placeholder="10-digit number" required>
+
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label>Gender:</label>
+      <div class="gender-options">
+        <label><input type="radio" name="gender" value="Male" required> Male</label>
+        <label><input type="radio" name="gender" value="Female"> Female</label>
+        <label><input type="radio" name="gender" value="Other"> Other</label>
+      </div>
+
+      <label for="numPeople">Number of People Attending:</label>
+      <input type="number" id="numPeople" name="numPeople" min="1" required>
+
+      <label for="event">Event Participating In:</label>
+      <select id="event" name="event" required>
+        <option value="">Select an Event</option>
+        <option value="Color Run">Color Run</option>
+        <option value="Music & Dance">Music & Dance</option>
+        <option value="Food Fest">Food Fest</option>
+        <option value="Cultural Parade">Cultural Parade</option>
+        <option value="Water Balloon War">Water Balloon War</option>
+      </select>
+
+      <label>Preferred Time Slot:</label>
+      <div class="timeslot-options">
+        <label><input type="radio" name="timeslot" value="10:00 AM - 12:00 PM" required> 10:00 AM – 12:00 PM</label>
+        <label><input type="radio" name="timeslot" value="12:00 PM - 2:00 PM"> 12:00 PM – 2:00 PM</label>
+        <label><input type="radio" name="timeslot" value="2:00 PM - 4:00 PM"> 2:00 PM – 4:00 PM</label>
+      </div>
+
+      <label for="payment">Payment Method:</label>
+      <select id="payment" name="payment" required>
+        <option value="">Select Payment Method</option>
+        <option value="UPI">UPI</option>
+        <option value="Net Banking">Net Banking</option>
+        <option value="Credit/Debit Card">Credit/Debit Card</option>
+        <option value="Cash">Cash</option>
+      </select>
+
+      <label>
+        <input type="checkbox" name="terms" required>
+        I agree to the <a href="#" target="_blank">Terms and Conditions</a>.
+      </label>
+
+      <button type="submit">Register Now</button>
+    </form>
+  </div>
+
+</body>
+</html>
